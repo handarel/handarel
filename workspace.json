@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "projects": {},
+  "cli": {
+    "defaultCollection": "@nrwl/workspace"
+  },
+  "schematics": {
+    "@nrwl/workspace": {
+      "library": {
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/node": {
+      "application": {
+        "linter": "eslint",
+        "tags": "platform:all, framework:none, type:application"
+      },
+      "library": {
+        "linter": "eslint",
+        "tags": "scope:shared, platform:all, framework:none, type:library"
+      }
+    },
+    "@nrwl/nx-plugin": {
+      "plugin": {
+        "linter": "eslint"
+      }
+    }
+  }
+}

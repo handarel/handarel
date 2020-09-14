@@ -7,7 +7,19 @@ const builtinModules = nodeModules.builtinModules.join('|');
 const config: Linter.Config = {
   plugins: ['simple-import-sort'],
   extends: ['plugin:import/errors', 'plugin:import/warnings'],
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.ts', '.jsx', '.tsx', '.mjs', '.json', '.node'],
+      },
+    },
+    'import/extensions': ['.js', '.ts', '.jsx', '.tsx', '.mjs', '.json', '.node'],
+  },
   rules: {
+    // This rule can enforce or disallow the use of certain file extensions
+    // https://github.com/benmosher/eslint-plugin-import/blob/v2.22.0/docs/rules/extensions.md
+    'import/extensions': ['error', 'never'],
+
     // Disable for 'simple-import-sort'
     'sort-imports': 'off',
 

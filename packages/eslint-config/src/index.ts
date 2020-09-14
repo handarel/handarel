@@ -1,7 +1,16 @@
 import { Linter } from 'eslint';
 
 const config: Linter.Config = {
-  extends: [].map((path) => require.resolve(path)),
+  env: {
+    es2020: true,
+    node: true,
+  },
+  parserOptions: {
+    parser: 'babel-eslint',
+    ecmaVersion: 2020,
+    sourceType: 'module',
+  },
+  extends: ['./lib/base'].map((path) => require.resolve(path)),
 };
 
 export = config;

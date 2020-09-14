@@ -10,7 +10,7 @@ const config: Linter.Config = {
     ecmaVersion: 2020,
     sourceType: 'module',
   },
-  extends: ['./lib/base', './lib/imports'].map((path) => require.resolve(path)),
+  extends: ['./lib/base', './lib/imports', './lib/jsdoc'].map((path) => require.resolve(path)),
 };
 
 export = config;

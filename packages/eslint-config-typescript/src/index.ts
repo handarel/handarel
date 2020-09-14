@@ -1,16 +1,21 @@
 import { Linter } from 'eslint';
 
 const config: Linter.Config = {
-  env: {
-    es2020: true,
-    node: true,
-  },
-  parserOptions: {
-    parser: 'babel-eslint',
-    ecmaVersion: 2020,
-    sourceType: 'module',
-  },
-  extends: ['./lib/base'].map((path) => require.resolve(path)),
+  overrides: [
+    {
+      files: ['**/*.ts'],
+      env: {
+        es2020: true,
+        node: true,
+      },
+      parserOptions: {
+        parser: '@typescript-eslint/parser',
+        ecmaVersion: 2020,
+        sourceType: 'module',
+      },
+      extends: ['./lib/base', './lib/tsdoc'].map((path) => require.resolve(path)),
+    },
+  ],
 };
 
 export = config;

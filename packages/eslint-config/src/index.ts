@@ -1,5 +1,16 @@
 import type { Linter } from 'eslint';
 
+const rules = [
+  './lib/base',
+  './lib/imports',
+  './lib/jsdoc',
+  './lib/node',
+  './lib/promise',
+  './lib/unicorn',
+  './lib/jest',
+  './lib/cypress',
+];
+
 const config: Linter.Config = {
   env: {
     es2020: true,
@@ -10,7 +21,7 @@ const config: Linter.Config = {
     ecmaVersion: 2020,
     sourceType: 'module',
   },
-  extends: ['./lib/base', './lib/imports', './lib/jsdoc'].map((path) => require.resolve(path)),
+  extends: rules.map((path) => require.resolve(path)),
 };
 
 export = config;

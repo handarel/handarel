@@ -8,6 +8,11 @@ module.exports = {
     parser: 'babel-eslint',
     sourceType: 'module',
     ecmaVersion: 12,
+    project: './tsconfig.base.json',
   },
-  extends: ['eslint:recommended', 'airbnb-base', 'plugin:prettier/recommended'],
+  extends: [
+    '@handarel/eslint-config',
+    '@handarel/eslint-config-typescript',
+    'plugin:prettier/recommended',
+  ],
 };

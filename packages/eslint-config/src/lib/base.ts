@@ -17,6 +17,7 @@ const config: Linter.Config = {
       'error',
       {
         code: 100,
+        comments: 140,
         ignoreUrls: true,
         ignoreComments: false,
         ignoreRegExpLiterals: true,

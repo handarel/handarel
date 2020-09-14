@@ -27,6 +27,9 @@
     },
     "eslint-config-typescript": {
       "tags": ["scope:shared", "platform:all", "framework:none", "type:library"]
+    },
+    "eslint-config-angular": {
+      "tags": ["scope:shared", "platform:all", "framework:none", "type:library"]
     }
   },
   "workspaceLayout": {

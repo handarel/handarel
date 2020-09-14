@@ -30,6 +30,9 @@
     },
     "eslint-config-angular": {
       "tags": ["scope:shared", "platform:all", "framework:none", "type:library"]
+    },
+    "eslint-config-nest": {
+      "tags": ["scope:shared", "platform:all", "framework:none", "type:library"]
     }
   },
   "workspaceLayout": {

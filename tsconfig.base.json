@@ -19,7 +19,8 @@
     "paths": {
       "@handarel/eslint-config": ["packages/eslint-config/src/index.ts"],
       "@handarel/eslint-config-typescript": ["packages/eslint-config-typescript/src/index.ts"],
-      "@handarel/eslint-config-angular": ["packages/eslint-config-angular/src/index.ts"]
+      "@handarel/eslint-config-angular": ["packages/eslint-config-angular/src/index.ts"],
+      "@handarel/eslint-config-nest": ["packages/eslint-config-nest/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,4 +1,8 @@
+import * as nodeModules from 'module';
+
 import { Linter } from 'eslint';
+
+const builtinModules = nodeModules.builtinModules.join('|');
 
 const config: Linter.Config = {
   plugins: ['simple-import-sort'],
@@ -21,7 +25,7 @@ const config: Linter.Config = {
       {
         groups: [
           // Node builtins first.
-          [`^(${require('module').builtinModules.join('|')})(/|$)`],
+          [`^(${builtinModules})(/|$)`],
           // Side effect imports.
           ['^\\u0000'],
           // Packages.

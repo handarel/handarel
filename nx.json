@@ -21,7 +21,11 @@
       }
     }
   },
-  "projects": {},
+  "projects": {
+    "eslint-config": {
+      "tags": ["scope:shared", "platform:all", "framework:none", "type:library"]
+    }
+  },
   "workspaceLayout": {
     "appsDir": "packages",
     "libsDir": "packages"

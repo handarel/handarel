@@ -1,6 +1,43 @@
 {
   "version": 1,
-  "projects": {},
+  "projects": {
+    "eslint-config": {
+      "root": "packages/eslint-config",
+      "sourceRoot": "packages/eslint-config/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "tsConfig": [
+              "packages/eslint-config/tsconfig.lib.json",
+              "packages/eslint-config/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!packages/eslint-config/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "packages/eslint-config/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "builder": "@nrwl/node:package",
+          "options": {
+            "outputPath": "dist/packages/eslint-config",
+            "tsConfig": "packages/eslint-config/tsconfig.lib.json",
+            "packageJson": "packages/eslint-config/package.json",
+            "main": "packages/eslint-config/src/index.ts",
+            "assets": ["packages/eslint-config/*.md"]
+          }
+        }
+      }
+    }
+  },
   "cli": {
     "defaultCollection": "@nrwl/workspace"
   },

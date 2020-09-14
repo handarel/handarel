@@ -1,6 +1,6 @@
 import * as nodeModules from 'module';
 
-import { Linter } from 'eslint';
+import type { Linter } from 'eslint';
 
 const builtinModules = nodeModules.builtinModules.join('|');
 

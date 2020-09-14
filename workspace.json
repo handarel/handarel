@@ -36,6 +36,42 @@
           }
         }
       }
+    },
+    "eslint-config-typescript": {
+      "root": "packages/eslint-config-typescript",
+      "sourceRoot": "packages/eslint-config-typescript/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "tsConfig": [
+              "packages/eslint-config-typescript/tsconfig.lib.json",
+              "packages/eslint-config-typescript/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!packages/eslint-config-typescript/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "packages/eslint-config-typescript/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "builder": "@nrwl/node:package",
+          "options": {
+            "outputPath": "dist/packages/eslint-config-typescript",
+            "tsConfig": "packages/eslint-config-typescript/tsconfig.lib.json",
+            "packageJson": "packages/eslint-config-typescript/package.json",
+            "main": "packages/eslint-config-typescript/src/index.ts",
+            "assets": ["packages/eslint-config-typescript/*.md"]
+          }
+        }
+      }
     }
   },
   "cli": {

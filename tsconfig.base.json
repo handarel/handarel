@@ -17,7 +17,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@handarel/eslint-config": ["packages/eslint-config/src/index.ts"]
+      "@handarel/eslint-config": ["packages/eslint-config/src/index.ts"],
+      "@handarel/eslint-config-typescript": ["packages/eslint-config-typescript/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -24,6 +24,9 @@
   "projects": {
     "eslint-config": {
       "tags": ["scope:shared", "platform:all", "framework:none", "type:library"]
+    },
+    "eslint-config-typescript": {
+      "tags": ["scope:shared", "platform:all", "framework:none", "type:library"]
     }
   },
   "workspaceLayout": {

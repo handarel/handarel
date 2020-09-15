@@ -14,5 +14,7 @@ module.exports = {
     '@handarel/eslint-config',
     '@handarel/eslint-config-typescript',
     'plugin:prettier/recommended',
+    'prettier/@typescript-eslint',
+    'prettier/unicorn',
   ],
 };
